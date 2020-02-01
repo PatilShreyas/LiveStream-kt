@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LiveStreamDemo</string>
+    <string name="text_execute">Execute</string>
+</resources>

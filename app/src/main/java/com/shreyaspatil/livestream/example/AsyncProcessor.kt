@@ -12,8 +12,15 @@ class AsyncProcessor {
             val response = asyncTask.await()
 
             // Emit network response.
-            liveStream.emit("response", response)
+            liveStream.set("response", response)
         }
+
+    }
+
+    fun otherThreadExecute() {
+        Thread(Runnable {
+            liveStream.post("response", "Hello from Other thread")
+        }).start()
     }
 
     private suspend fun asyncTask(): String = coroutineScope {

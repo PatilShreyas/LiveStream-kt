@@ -1,6 +1,7 @@
 package com.shreyaspatil.livestream.example
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.shreyaspatil.livestream.LiveStream
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         button_execute.setOnClickListener {
             // Execute background task
-            AsyncProcessor().execute()
+//            AsyncProcessor().execute()
+            AsyncProcessor().otherThreadExecute()
         }
     }
 
@@ -29,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         // Whenever value is emitted to 'response' stream,
         // below block is executed.
 
-        liveStream.on("response") { response ->
+        liveStream.on("response", null) { response ->
+            Log.w("TESTING_RESPONSE", response)
             showToast(response)
         }
     }

@@ -10,14 +10,42 @@ LiveStream is a data holder class which can observe ***change*** of data in real
 ![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/LiveStream-kt?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil?label=Follow&style=social)
 
-## Getting Started
+## Getting Started ⚡️
+This library is fully compatible with **Java**. Here we've demonstrated using Kotlin.
 
-## Sample Usage
+### Add Dependency
+Add below dependency in [`build.gradle`](app/build.gradle) of your app module.
+```gradle
+dependencies {
+    implementation 'com.shreyaspatil:LiveStream-kt:0.1'
+}
+```
 
-## Contribute
+### Initialize `LiveStream` Class
+`LiveStream` is a generic class. You can create instance as below.
+
+```kotlin
+        private val liveStream = LiveStream<String>()
+```
+
+### Subscribe to Stream / Add Observer
+`LiveStream` event will be dispatched when data is changed. See below code to add observer / subscriber.
+
+*Imagine, this code is in UI class of Android (e.g. MainActivity). Whenever value from background task (e.g. Service Class) is emitted, subscriber will listen live changes in data.*
+
+```kotlin
+        val observer = liveStream.subscribe("httpResponse") { response ->
+            showToast("This is HTTP response: $response")
+        }
+```
+`LiveStream#subscribe()` method will return instance of `StreamObserver`. This instance will be useful to unsubscribe from `LiveStream`.
+
+## Sample Usage 🚀
+
+## Contribute 🤝
 See [Contributing Guidelines](CONTRIBUTING.md). 
 
-## License
+## License 📃
 ```
 MIT License
 

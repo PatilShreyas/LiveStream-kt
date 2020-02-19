@@ -1,6 +1,11 @@
-# LiveStream-Kt
+# LiveStream-Kt (Android) 📱
+LiveStream is a data holder class which can observe ***change*** of data in real-time and ***emit values*** too. Unlike other observables, LiveStream uses different approach. Here's emitter subscriber pattern. It's developed in Kotlin and fully compatible with Java.
 
-### 🚧 Work in Progress 🚧
+## Getting Started
+
+## Sample Usage
+
+## Contribute
 
 ## LICENSE
 ```

@@ -38,8 +38,14 @@ This library is fully compatible with **Java**. Here we've demonstrated using Ko
 
 ### Add Dependency
 Add below dependency in [`build.gradle`](app/build.gradle) of your app module.
+
 Latest Build - ![Bintray](https://img.shields.io/bintray/v/patilshreyas/maven/dev.shreyaspatil:LiveStream-kt?style=flat-square)
 ```gradle
+repositories {
+    maven {
+        url 'http://dl.bintray.com/patilshreyas/maven'
+    }
+}
 dependencies {
     implementation 'com.shreyaspatil:LiveStream-kt:0.1'
 }

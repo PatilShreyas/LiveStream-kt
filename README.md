@@ -15,6 +15,7 @@ LiveStream is a data holder class which can observe ***change*** of data in real
 ## Sample Usage
 
 ## Contribute
+See [Contributing Guidelines](CONTRIBUTING.md). 
 
 ## License
 ```

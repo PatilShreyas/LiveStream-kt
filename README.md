@@ -40,7 +40,37 @@ dependencies {
 ```
 `LiveStream#subscribe()` method will return instance of `StreamObserver`. This instance will be useful to unsubscribe from `LiveStream`.
 
+### Emit Values/Data
+You can emit values in `LiveData` from anywhere in the application. See below code.
+
+#### From Main Thread :
+To emit values from main thread, use `LiveStream#set()` method.
+```kotlin
+        val response = getResponse()
+        liveStream.set("httpResponse", response)
+```
+
+#### From Other Thread :
+To emit values from other thread, use `LiveStream#post()` method.
+```kotlin
+        val response = getResponse()
+        liveStream.post("httpResponse", response)
+```
+
+### Unsubscribe 
+To unsubscribe stream observer, use `LiveStream#unsubscribe()` method. It has to pass instance of `StreamObserver` which is obtained when you called `subscribe()` method. See below code.
+
+```kotlin
+    override fun onStop() {
+        super.onStop()
+        liveStream.unsubscribe(observer)
+    }
+```
+
 ## Sample Usage 🚀
+Sample code is available in [`/app`](/app) directory. Both Java & Kotlin code sample available.
+- [Kotlin Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/kotlin/com/shreyaspatil/livestream/example/kotlin)
+- [Java Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/kotlin)
 
 ## Contribute 🤝
 See [Contributing Guidelines](CONTRIBUTING.md). 

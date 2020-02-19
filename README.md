@@ -6,6 +6,7 @@
 
 LiveStream is a data holder class which can observe ***change*** of data in real-time and ***emit values*** too. Unlike other observables, LiveStream uses different approach. Here's emitter subscriber pattern. It's developed in Kotlin and fully compatible with Java.
 
+![Bintray](https://img.shields.io/bintray/v/patilshreyas/maven/dev.shreyaspatil:LiveStream-kt?style=flat-square)
 ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)
 [![JavaDoc](https://img.shields.io/badge/JavaDoc-LiveStreamKt-blue.svg)](https://patilshreyas.github.io/LiveStream-kt/docs/)
 
@@ -37,6 +38,7 @@ This library is fully compatible with **Java**. Here we've demonstrated using Ko
 
 ### Add Dependency
 Add below dependency in [`build.gradle`](app/build.gradle) of your app module.
+Latest Build - ![Bintray](https://img.shields.io/bintray/v/patilshreyas/maven/dev.shreyaspatil:LiveStream-kt?style=flat-square)
 ```gradle
 dependencies {
     implementation 'com.shreyaspatil:LiveStream-kt:0.1'

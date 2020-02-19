@@ -69,8 +69,8 @@ To unsubscribe stream observer, use `LiveStream#unsubscribe()` method. It has to
 
 ## Sample Usage 🚀
 Sample code is available in [`/app`](/app) directory. Both Java & Kotlin code sample available.
-- [Kotlin Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/kotlin/com/shreyaspatil/livestream/example/kotlin)
-- [Java Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/kotlin)
+- [Kotlin Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/kotlin)
+- [Java Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/java)
 
 ## Contribute 🤝
 See [Contributing Guidelines](CONTRIBUTING.md). 

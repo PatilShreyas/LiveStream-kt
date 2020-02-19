@@ -73,6 +73,7 @@ Sample code is available in [`/app`](/app) directory. Both Java & Kotlin code sa
 - [Java Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/java)
 
 ## Contribute 🤝
+If you want to contribute to this library, you're always welcome!
 See [Contributing Guidelines](CONTRIBUTING.md). 
 
 ## Contact ✉️

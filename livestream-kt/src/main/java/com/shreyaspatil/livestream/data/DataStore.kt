@@ -58,6 +58,10 @@ class DataStore<T : Any> private constructor() {
         return mDataItemsMap[key]?.value
     }
 
+    fun removeListener(key: String, onChangeListener: LiveStream.OnChangeListener<T>?) {
+        mDataItemsMap[key]?.onChangeListener?.remove(onChangeListener)
+    }
+
     private fun logError(e: Exception) {
         Log.e(javaClass.simpleName, e.message, e)
     }

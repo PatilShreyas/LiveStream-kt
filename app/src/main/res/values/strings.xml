@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LiveStreamDemo</string>
-    <string name="text_execute">Execute</string>
+    <string name="text_execute_main">Execute (Main Thread)</string>
+    <string name="text_execute_thread">Execute (Other Thread)</string>
 </resources>

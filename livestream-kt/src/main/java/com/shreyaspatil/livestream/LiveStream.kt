@@ -3,7 +3,6 @@ package com.shreyaspatil.livestream
 import android.annotation.SuppressLint
 import androidx.annotation.MainThread
 import androidx.arch.core.executor.ArchTaskExecutor
-import androidx.lifecycle.LifecycleObserver
 import com.shreyaspatil.livestream.data.DataStore
 
 // TODO Documentation
@@ -20,6 +19,7 @@ class LiveStream<T : Any> : ILiveStream<T> {
     private val mPostRunnable = Runnable {
         var newValue: Any?
         var newKey: String?
+
         synchronized(mDataLock) {
             newValue = mPendingValue
             newKey = mPendingKey
@@ -33,29 +33,27 @@ class LiveStream<T : Any> : ILiveStream<T> {
         }
     }
 
-    // TODO Lifecycle
-
-    override fun on(
-        key: String,
-        owner: LifecycleObserver?,
-        onChangeListener: OnChangeListener<T>?
-    ) {
-        mStorage?.setListener(key, onChangeListener)
+    override fun subscribe(
+        stream: String,
+        onChangeListener: OnChangeListener<T>
+    ): StreamObserver<T> {
+        mStorage?.setListener(stream, onChangeListener)
+        return StreamObserver(stream, onChangeListener)
     }
 
-    override fun getValue(key: String): T? = mStorage?.getValue(key)
+    override fun getValue(stream: String): T? = mStorage?.getValue(stream)
 
     @MainThread
-    override fun set(key: String, value: T?) {
-        mStorage?.setValue(key, value)
+    override fun set(stream: String, value: T?) {
+        mStorage?.setValue(stream, value)
     }
 
     @SuppressLint("RestrictedApi")
-    override fun post(key: String, value: T?) {
+    override fun post(stream: String, value: T?) {
         var postTask: Boolean
         synchronized(mDataLock) {
             postTask = mPendingValue == UNSET
-            mPendingKey = key
+            mPendingKey = stream
             mPendingValue = value
         }
 
@@ -64,6 +62,10 @@ class LiveStream<T : Any> : ILiveStream<T> {
         }
 
         ArchTaskExecutor.getInstance().postToMainThread(mPostRunnable)
+    }
+
+    override fun unsubscribe(observer: StreamObserver<T>) {
+        mStorage?.removeListener(observer.stream, observer.onChangeListener)
     }
 
     interface OnChangeListener<T> {

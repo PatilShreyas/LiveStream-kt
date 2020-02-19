@@ -1,15 +1,13 @@
 package com.shreyaspatil.livestream
 
-import androidx.lifecycle.LifecycleObserver
+internal interface ILiveStream<T : Any> {
+    fun set(stream: String, value: T?)
+    fun post(stream: String, value: T?)
+    fun subscribe(
+        stream: String,
+        onChangeListener: LiveStream.OnChangeListener<T>
+    ): StreamObserver<T>
 
-internal interface ILiveStream<T> {
-    fun set(key: String, value: T?)
-    fun post(key: String, value: T?)
-    fun on(
-        key: String,
-        owner: LifecycleObserver?,
-        onChangeListener: LiveStream.OnChangeListener<T>?
-    )
-
-    fun getValue(key: String): T?
+    fun unsubscribe(observer: StreamObserver<T>)
+    fun getValue(stream: String): T?
 }

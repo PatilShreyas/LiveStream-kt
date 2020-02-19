@@ -7,6 +7,7 @@ class AsyncProcessor {
     private val liveStream = LiveStream<String>()
 
     fun execute() {
+        // Emit value from main thread
         CoroutineScope(Dispatchers.Main).launch {
             val asyncTask = async{ asyncTask() }
             val response = asyncTask.await()
@@ -17,7 +18,8 @@ class AsyncProcessor {
 
     }
 
-    fun otherThreadExecute() {
+    fun executeInBackground() {
+        // Create thread and emit value from another thread
         Thread(Runnable {
             liveStream.post("response", "Hello from Other thread")
         }).start()

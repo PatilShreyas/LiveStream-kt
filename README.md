@@ -10,7 +10,21 @@ LiveStream is a data holder class which can observe ***change*** of data in real
 ![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/LiveStream-kt?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil?label=Follow&style=social)
 
-## Getting Started ⚡️
+## 💡 Introduction
+`LiveStream` is different than any other data observables. As compared to Android Architecture Component's [`LiveData`](https://developer.android.com/reference/androidx/lifecycle/LiveData.html) it's totally different. In `LiveData`, you need to share the instance and then you need to add observer to listen for changes. It's useful in `ViewModel` to share data.
+`LiveStream` is useful in background and UI data sharing. Here, you need to subscribe to data stream and just need to **emit data values** and **subscribe data stream** from anywhere in the application using multiple instances of `LiveStream`.
+
+For e.g. 
+You have following classes in app- 
+- UI Class - `MainActivity`
+- Service Class - `BackgroundService`
+
+To share data in both classes, you will just need to add subscriber in UI class (MainActivity). In MainActivity, you'll subscribe to ***`httpResponse`*** stream.
+In `BackgroundService` class, whenever you want to share data, you will just need to emit data on stream - ***`httpResponse`***.
+Then, those who subscribed for `httpResponse` data stream will be dispatched on value emission.
+
+
+## ⚡️ Getting Started
 This library is fully compatible with **Java**. Here we've demonstrated using Kotlin.
 
 ### Add Dependency
@@ -67,21 +81,21 @@ To unsubscribe stream observer, use `LiveStream#unsubscribe()` method. It has to
     }
 ```
 
-## Sample Usage 🚀
+## 🚀 Sample Usage
 Sample code is available in [`/app`](/app) directory. Both Java & Kotlin code sample available.
 - [Kotlin Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/kotlin)
 - [Java Sample](https://github.com/PatilShreyas/LiveStream-kt/tree/master/app/src/main/java/com/shreyaspatil/livestream/example/java)
 
-## Contribute 🤝
+## 🤝 Contribute
 If you want to contribute to this library, you're always welcome!
 See [Contributing Guidelines](CONTRIBUTING.md). 
 
-## Contact ✉️
+## ✉️ Contact
 If you need any help, you can connect with me.
 
 Visit:- [shreyaspatil.dev](https://shreyaspatil.dev)
 
-## License 📃
+## 📃 License
 ```
 MIT License
 

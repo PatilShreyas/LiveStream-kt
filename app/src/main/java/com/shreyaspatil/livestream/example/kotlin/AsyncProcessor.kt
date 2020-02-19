@@ -1,4 +1,4 @@
-package com.shreyaspatil.livestream.example
+package com.shreyaspatil.livestream.example.kotlin
 
 import com.shreyaspatil.livestream.LiveStream
 import kotlinx.coroutines.*

@@ -75,6 +75,11 @@ Sample code is available in [`/app`](/app) directory. Both Java & Kotlin code sa
 ## Contribute 🤝
 See [Contributing Guidelines](CONTRIBUTING.md). 
 
+## Contact ✉️
+If you need any help, you can connect with me.
+
+Visit:- [shreyaspatil.dev](https://shreyaspatil.dev)
+
 ## License 📃
 ```
 MIT License

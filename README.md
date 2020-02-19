@@ -22,6 +22,9 @@ You have following classes in app-
 To share data in both classes, you will just need to add subscriber in UI class (MainActivity). In MainActivity, you'll subscribe to ***`httpResponse`*** stream.
 In `BackgroundService` class, whenever you want to share data, you will just need to emit data on stream - ***`httpResponse`***.
 Then, those who subscribed for `httpResponse` data stream will be dispatched on value emission.
+<p align="center">
+  <img src="assets/LiveStream-Anim.gif" />
+</p>
 
 
 ## ⚡️ Getting Started

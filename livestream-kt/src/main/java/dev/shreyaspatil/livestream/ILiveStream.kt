@@ -1,4 +1,4 @@
-package com.shreyaspatil.livestream
+package dev.shreyaspatil.livestream
 
 internal interface ILiveStream<T : Any> {
     fun set(stream: String, value: T?)

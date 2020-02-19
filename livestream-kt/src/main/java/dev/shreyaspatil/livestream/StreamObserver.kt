@@ -1,4 +1,4 @@
-package com.shreyaspatil.livestream
+package dev.shreyaspatil.livestream
 
 /**
  * A data class which stores information of subscriber and stream.

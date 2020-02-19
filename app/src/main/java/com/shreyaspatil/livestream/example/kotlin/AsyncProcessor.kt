@@ -1,6 +1,6 @@
 package com.shreyaspatil.livestream.example.kotlin
 
-import com.shreyaspatil.livestream.LiveStream
+import dev.shreyaspatil.livestream.LiveStream
 import kotlinx.coroutines.*
 
 class AsyncProcessor {

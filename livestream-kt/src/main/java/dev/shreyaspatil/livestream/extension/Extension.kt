@@ -1,7 +1,7 @@
-package com.shreyaspatil.livestream.extension
+package dev.shreyaspatil.livestream.extension
 
-import com.shreyaspatil.livestream.LiveStream
-import com.shreyaspatil.livestream.StreamObserver
+import dev.shreyaspatil.livestream.LiveStream
+import dev.shreyaspatil.livestream.StreamObserver
 
 /**
  * Subscribes to the given stream. The events are dispatched on the main thread.

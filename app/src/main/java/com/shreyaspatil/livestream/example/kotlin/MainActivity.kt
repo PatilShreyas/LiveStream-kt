@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.shreyaspatil.livestream.LiveStream
-import com.shreyaspatil.livestream.StreamObserver
 import com.shreyaspatil.livestream.example.R
-import com.shreyaspatil.livestream.extension.subscribe
+import dev.shreyaspatil.livestream.LiveStream
+import dev.shreyaspatil.livestream.StreamObserver
+import dev.shreyaspatil.livestream.extension.subscribe
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

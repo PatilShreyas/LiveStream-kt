@@ -1,6 +1,6 @@
-package com.shreyaspatil.livestream.data
+package dev.shreyaspatil.livestream.data
 
-import com.shreyaspatil.livestream.LiveStream
+import dev.shreyaspatil.livestream.LiveStream
 
 data class DataItem<T>(
     var value: T? = null,

@@ -1,9 +1,9 @@
-package com.shreyaspatil.livestream
+package dev.shreyaspatil.livestream
 
 import android.annotation.SuppressLint
 import androidx.annotation.MainThread
 import androidx.arch.core.executor.ArchTaskExecutor
-import com.shreyaspatil.livestream.data.DataStore
+import dev.shreyaspatil.livestream.data.DataStore
 
 /**
  * LiveStream is a data holder class which can be created and used anywhere in application.

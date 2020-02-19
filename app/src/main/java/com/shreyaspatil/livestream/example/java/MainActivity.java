@@ -7,9 +7,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.shreyaspatil.livestream.LiveStream;
-import com.shreyaspatil.livestream.StreamObserver;
 import com.shreyaspatil.livestream.example.R;
+
+import dev.shreyaspatil.livestream.LiveStream;
+import dev.shreyaspatil.livestream.StreamObserver;
 
 public class MainActivity extends AppCompatActivity {
     private LiveStream<String> liveStream = new LiveStream<>();

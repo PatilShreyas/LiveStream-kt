@@ -1,6 +1,6 @@
 package com.shreyaspatil.livestream.example.java;
 
-import com.shreyaspatil.livestream.LiveStream;
+import dev.shreyaspatil.livestream.LiveStream;
 
 public class AsyncProcessor {
 

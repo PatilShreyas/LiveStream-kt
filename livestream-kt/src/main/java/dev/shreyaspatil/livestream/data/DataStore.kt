@@ -1,7 +1,7 @@
-package com.shreyaspatil.livestream.data
+package dev.shreyaspatil.livestream.data
 
 import android.util.Log
-import com.shreyaspatil.livestream.LiveStream
+import dev.shreyaspatil.livestream.LiveStream
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap

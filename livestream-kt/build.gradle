@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: "com.jfrog.bintray"
+
+version = "0.1"
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -9,7 +13,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -37,4 +41,121 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'LiveStream-kt'
+
+    publishedGroupId = 'dev.shreyaspatil'
+    libraryName = 'LiveStream-kt'
+    artifact = 'LiveStream-kt'
+    libraryDescription = 'LiveStream is a data holder class which can observe change of data in real-time and emit values too.'
+
+
+    // Your github repo link
+    siteUrl = 'https://github.com/patilshreyas/LiveStream-kt'
+    gitUrl = 'https://github.com/patilshreyas/LiveStream-kt'
+    githubRepository= 'patilshreyas/LiveStream-kt'
+
+    libraryVersion = version
+
+    developerId = 'patilshreyas'
+    developerName = 'Shreyas Patil'
+    developerEmail = 'shreyaspatilg@gmail.com'
+
+    licenseName = 'The MIT License'
+    licenseUrl = 'https://raw.githubusercontent.com/PatilShreyas/LiveStream-kt/master/LICENSE'
+    allLicenses = ["MIT"]
+}
+
+group = publishedGroupId
+def siteUrl = 'https://github.com/PatilShreyas/LiveStream-kt'      // Homepage URL of the library
+def gitUrl = 'https://github.com/PatilShreyas/LiveStream-kt.git'   // Git repository URL // Maven Group ID for the artifact
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+
+                // Add your description here
+                groupId 'dev.shreyaspatil'
+                artifactId = 'LiveStream-kt'
+                name 'LiveStream-kt'
+                description = 'Android library - LiveStream is a data holder class which can observe change of data in real-time and emit values too.'
+                url siteUrl
+
+                // Set your license
+                licenses {
+                    license {
+                        name 'The MIT License'
+                        url 'https://raw.githubusercontent.com/PatilShreyas/LiveStream-kt/master/LICENSE'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'PatilShreyas'
+                        name 'Shreyas Patil'
+                        email 'shreyaspatilg@gmail.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+// Avoid Kotlin docs error
+tasks.withType(Javadoc) {
+    enabled = false
+}
+
+// Remove javadoc related tasks
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+// https://github.com/bintray/gradle-bintray-plugin
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        // it is the name that appears in bintray when logged
+        name = "dev.shreyaspatil:LiveStream-kt"
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["MIT"]
+        publish = true
+        version {
+            gpg {
+                sign = true //Determines whether to GPG sign the files. The default is false
+                passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
+            }
+        }
+    }
 }

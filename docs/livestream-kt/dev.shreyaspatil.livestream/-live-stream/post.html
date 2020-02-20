@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>LiveStream.post - livestream-kt</title>
+    <link href="../../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">livestream-kt</a>&nbsp;/&nbsp;<a href="../index.html">dev.shreyaspatil.livestream</a>&nbsp;/&nbsp;<a
+        href="index.html">LiveStream</a>&nbsp;/&nbsp;<a href="./post.html">post</a><br/>
+<br/>
+<h1>post</h1>
+<a name="dev.shreyaspatil.livestream.LiveStream$post(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)"></a>
+<code><span class="keyword">fun </span><span class="identifier">post</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="dev.shreyaspatil.livestream.LiveStream$post(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/stream">stream</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="dev.shreyaspatil.livestream.LiveStream$post(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/value">value</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span
+        class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a></code>
+<p>Posts a task to main thread to set the given value.
+    This method should be called from background thread. Otherwise, you can use <a href="set.html">set</a>
+    If there are active subscribers, the value will be dispatched to them.</p>
+<h3>Parameters</h3>
+<p><a name="stream"></a>
+    <code>stream</code> - Data stream</p>
+<p><a name="value"></a>
+    <code>value</code> - The new value</p>
+</BODY>
+</HTML>

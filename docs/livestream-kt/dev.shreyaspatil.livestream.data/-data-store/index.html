@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>DataStore - livestream-kt</title>
+    <link href="../../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">livestream-kt</a>&nbsp;/&nbsp;<a href="../index.html">dev.shreyaspatil.livestream.data</a>&nbsp;/&nbsp;<a
+        href="./index.html">DataStore</a><br/>
+<br/>
+<h1>DataStore</h1>
+<code><span class="keyword">class </span><span class="identifier">DataStore</span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="get-value.html">getValue</a></h4>
+        </td>
+        <td>
+            <p>Returns the current value of given data stream.</p>
+            <code><span class="keyword">fun </span><span class="identifier">getValue</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.data.DataStore$getValue(kotlin.String)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><span class="identifier">T</span><span
+                    class="symbol">?</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="remove-listener.html">removeListener</a></h4>
+        </td>
+        <td>
+            <p>Removes the given listener from the data stream.</p>
+            <code><span class="keyword">fun </span><span
+                    class="identifier">removeListener</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.data.DataStore$removeListener(kotlin.String, dev.shreyaspatil.livestream.LiveStream.OnChangeListener((dev.shreyaspatil.livestream.data.DataStore.T)))/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.data.DataStore$removeListener(kotlin.String, dev.shreyaspatil.livestream.LiveStream.OnChangeListener((dev.shreyaspatil.livestream.data.DataStore.T)))/onChangeListener">onChangeListener</span><span
+                    class="symbol">:</span>&nbsp;<span
+                    class="identifier">OnChangeListener</span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">?</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="set-listener.html">setListener</a></h4>
+        </td>
+        <td>
+            <p>Subscribes observer to the given stream.</p>
+            <code><span class="keyword">fun </span><span class="identifier">setListener</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.data.DataStore$setListener(kotlin.String, dev.shreyaspatil.livestream.LiveStream.OnChangeListener((dev.shreyaspatil.livestream.data.DataStore.T)))/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.data.DataStore$setListener(kotlin.String, dev.shreyaspatil.livestream.LiveStream.OnChangeListener((dev.shreyaspatil.livestream.data.DataStore.T)))/listener">listener</span><span
+                    class="symbol">:</span>&nbsp;<span
+                    class="identifier">OnChangeListener</span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">?</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="set-value.html">setValue</a></h4>
+        </td>
+        <td>
+            <p>Sets the given value to the stream (key).</p>
+            <code><span class="keyword">fun </span><span class="identifier">setValue</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.data.DataStore$setValue(kotlin.String, dev.shreyaspatil.livestream.data.DataStore.T)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.data.DataStore$setValue(kotlin.String, dev.shreyaspatil.livestream.data.DataStore.T)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<span class="identifier">T</span><span
+                    class="symbol">?</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="get-instance.html">getInstance</a></h4>
+        </td>
+        <td>
+            <p>Returns singleton instance of <a href="./index.html">DataStore</a></p>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+                    class="identifier">Any</span></a><span class="symbol">&gt;</span> <span
+                    class="identifier">getInstance</span><span class="symbol">(</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="./index.html"><span class="identifier">DataStore</span></a><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span
+                    class="symbol">?</span></code></td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>

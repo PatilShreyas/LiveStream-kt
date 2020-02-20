@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>LiveStream - livestream-kt</title>
+    <link href="../../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">livestream-kt</a>&nbsp;/&nbsp;<a href="../index.html">dev.shreyaspatil.livestream</a>&nbsp;/&nbsp;<a
+        href="./index.html">LiveStream</a><br/>
+<br/>
+<h1>LiveStream</h1>
+<code><span class="keyword">class </span><span class="identifier">LiveStream</span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span
+        class="identifier">ILiveStream</span><span class="symbol">&lt;</span><span
+        class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>LiveStream is a data holder class which can be created and used anywhere in application.
+    By using it, You can emit values to any stream with generic data from anywhere in the
+    application.
+    Observers will receive data events when the value of subscribed stream is updated.
+    This class is designed to share data between different modules in your application.</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+    <code>T</code> - The type of a data.</p>
+<h3>Types</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="-on-change-listener/index.html">OnChangeListener</a></h4>
+        </td>
+        <td>
+            <p>A simple callback that can retrieve from <a href="./index.html">LiveStream</a>.</p>
+            <code><span class="keyword">interface </span><span
+                    class="identifier">OnChangeListener</span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+        </td>
+        <td>
+            <p>LiveStream is a data holder class which can be created and used anywhere in
+                application.
+                By using it, You can emit values to any stream with generic data from anywhere in
+                the application.
+                Observers will receive data events when the value of subscribed stream is updated.
+                This class is designed to share data between different modules in your
+                application.</p>
+            <code><span class="identifier">LiveStream</span><span class="symbol">(</span><span
+                    class="symbol">)</span></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="get-value.html">getValue</a></h4>
+        </td>
+        <td>
+            <p>Returns the current value of a stream. Note that calling this method on a background
+                thread
+                does not guarantee that the latest value set will be received.</p>
+            <code><span class="keyword">fun </span><span class="identifier">getValue</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.LiveStream$getValue(kotlin.String)/stream">stream</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><span class="identifier">T</span><span
+                    class="symbol">?</span></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="post.html">post</a></h4>
+        </td>
+        <td>
+            <p>Posts a task to main thread to set the given value.
+                This method should be called from background thread. Otherwise, you can use <a
+                        href="set.html">set</a>
+                If there are active subscribers, the value will be dispatched to them.</p>
+            <code><span class="keyword">fun </span><span class="identifier">post</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.LiveStream$post(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/stream">stream</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.LiveStream$post(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<span class="identifier">T</span><span
+                    class="symbol">?</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="set.html">set</a></h4>
+        </td>
+        <td>
+            <p>Sets the value. If there are active subscribers, the value will be dispatched to
+                them.
+                This method must be called from the main thread.
+                If you need set a value from a background thread, you can use <a href="post.html">post</a>
+            </p>
+            <code><span class="keyword">fun </span><span class="identifier">set</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.LiveStream$set(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/stream">stream</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.LiveStream$set(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<span class="identifier">T</span><span
+                    class="symbol">?</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="subscribe.html">subscribe</a></h4>
+        </td>
+        <td>
+            <p>Subscribes to the given stream. The events are dispatched on the main thread.
+                If stream already has data set, it will be delivered to the listener.
+                You should call <a href="unsubscribe.html">unsubscribe</a> to stop observing
+                LiveStream.</p>
+            <code><span class="keyword">fun </span><span class="identifier">subscribe</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.LiveStream$subscribe(kotlin.String, dev.shreyaspatil.livestream.LiveStream.OnChangeListener((dev.shreyaspatil.livestream.LiveStream.T)))/stream">stream</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.LiveStream$subscribe(kotlin.String, dev.shreyaspatil.livestream.LiveStream.OnChangeListener((dev.shreyaspatil.livestream.LiveStream.T)))/onChangeListener">onChangeListener</span><span
+                    class="symbol">:</span>&nbsp;<span
+                    class="identifier">OnChangeListener</span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a href="../-stream-observer/index.html"><span
+                    class="identifier">StreamObserver</span></a><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="unsubscribe.html">unsubscribe</a></h4>
+        </td>
+        <td>
+            <p>Removes/unsubscribe the given stream observer.</p>
+            <code><span class="keyword">fun </span><span class="identifier">unsubscribe</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.LiveStream$unsubscribe(dev.shreyaspatil.livestream.StreamObserver((dev.shreyaspatil.livestream.LiveStream.T)))/observer">observer</span><span
+                    class="symbol">:</span>&nbsp;<a href="../-stream-observer/index.html"><span
+                    class="identifier">StreamObserver</span></a><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="../../dev.shreyaspatil.livestream.extension/subscribe.html">subscribe</a>
+            </h4>
+        </td>
+        <td>
+            <p>Subscribes to the given stream. The events are dispatched on the main thread.
+                If stream already has data set, it will be delivered to the listener.
+                You should call <a href="unsubscribe.html">LiveStream.unsubscribe</a> to stop
+                observing LiveStream.</p>
+            <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+                    class="identifier">Any</span></a><span class="symbol">&gt;</span> <a
+                    href="./index.html"><span class="identifier">LiveStream</span></a><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span
+                    class="symbol">.</span><span class="identifier">subscribe</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="dev.shreyaspatil.livestream.extension$subscribe(dev.shreyaspatil.livestream.LiveStream((dev.shreyaspatil.livestream.extension.subscribe.T)), kotlin.String, kotlin.Function1((dev.shreyaspatil.livestream.extension.subscribe.T, kotlin.Unit)))/stream">stream</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="dev.shreyaspatil.livestream.extension$subscribe(dev.shreyaspatil.livestream.LiveStream((dev.shreyaspatil.livestream.extension.subscribe.T)), kotlin.String, kotlin.Function1((dev.shreyaspatil.livestream.extension.subscribe.T, kotlin.Unit)))/onChangeCallback">onChangeCallback</span><span
+                    class="symbol">:</span>&nbsp;<span class="symbol">(</span><span
+                    class="identifier">T</span><span class="symbol">?</span><span
+                    class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a href="../-stream-observer/index.html"><span
+                    class="identifier">StreamObserver</span></a><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>

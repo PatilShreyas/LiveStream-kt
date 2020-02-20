@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>LiveStream.set - livestream-kt</title>
+    <link href="../../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">livestream-kt</a>&nbsp;/&nbsp;<a href="../index.html">dev.shreyaspatil.livestream</a>&nbsp;/&nbsp;<a
+        href="index.html">LiveStream</a>&nbsp;/&nbsp;<a href="./set.html">set</a><br/>
+<br/>
+<h1>set</h1>
+<a name="dev.shreyaspatil.livestream.LiveStream$set(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)"></a>
+<code><span class="identifier">@MainThread</span> <span class="keyword">fun </span><span
+        class="identifier">set</span><span class="symbol">(</span><span class="identifier"
+                                                                        id="dev.shreyaspatil.livestream.LiveStream$set(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/stream">stream</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="dev.shreyaspatil.livestream.LiveStream$set(kotlin.String, dev.shreyaspatil.livestream.LiveStream.T)/value">value</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span
+        class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a></code>
+<p>Sets the value. If there are active subscribers, the value will be dispatched to them.
+    This method must be called from the main thread.
+    If you need set a value from a background thread, you can use <a href="post.html">post</a></p>
+<h3>Parameters</h3>
+<p><a name="stream"></a>
+    <code>stream</code> - Data stream</p>
+<p><a name="value"></a>
+    <code>value</code> - The new value</p>
+</BODY>
+</HTML>

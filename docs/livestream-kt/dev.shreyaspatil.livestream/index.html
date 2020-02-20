@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>dev.shreyaspatil.livestream - livestream-kt</title>
+    <link href="../../style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../index.html">livestream-kt</a>&nbsp;/&nbsp;<a href="./index.html">dev.shreyaspatil.livestream</a><br/>
+<br/>
+<h2>Package dev.shreyaspatil.livestream</h2>
+<h3>Types</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <h4><a href="-live-stream/index.html">LiveStream</a></h4>
+        </td>
+        <td>
+            <p>LiveStream is a data holder class which can be created and used anywhere in
+                application.
+                By using it, You can emit values to any stream with generic data from anywhere in
+                the application.
+                Observers will receive data events when the value of subscribed stream is updated.
+                This class is designed to share data between different modules in your
+                application.</p>
+            <code><span class="keyword">class </span><span class="identifier">LiveStream</span><span
+                    class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+                    class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span
+                    class="symbol">:</span>&nbsp;<span class="identifier">ILiveStream</span><span
+                    class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4><a href="-stream-observer/index.html">StreamObserver</a></h4>
+        </td>
+        <td>
+            <p>A data class which stores information of subscriber and stream.
+                Reference is useful to unsubscribe from stream.</p>
+            <code><span class="keyword">class </span><span
+                    class="identifier">StreamObserver</span><span class="symbol">&lt;</span><span
+                    class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+                    class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,9 +1,8 @@
 name: CI
-on: push
+on: release
 
 jobs:
   publish:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +13,7 @@ jobs:
         java-version: 1.8
     - name: Grant Permission to Execute
       run: chmod +x gradlew
-    - name: Build with Gradle
+    - name: Publish Library
       env:
         bintrayUser: ${{ secrets.BINTRAY_USER }}
         bintrayApiKey: ${{ secrets.BINTRAY_API_KEY }}

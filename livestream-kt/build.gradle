@@ -28,7 +28,7 @@ android {
     }
 
     dokka {
-        outputFormat = 'gfm'
+        outputFormat = 'html'
         outputDirectory = "docs/"
     }
 }

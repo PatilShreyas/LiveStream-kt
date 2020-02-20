@@ -1,5 +1,5 @@
-$dokka.format:gfm
-$dokka.linkExtension:md
+$dokka.format:html
+$dokka.linkExtension:html
 
 dev.shreyaspatil.livestream
 dev.shreyaspatil.livestream.data

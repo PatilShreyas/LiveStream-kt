@@ -8,7 +8,7 @@ LiveStream is a data holder class which can observe ***change*** of data in real
 
 ![Bintray](https://img.shields.io/bintray/v/patilshreyas/maven/dev.shreyaspatil:LiveStream-kt?style=flat-square)
 ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)
-[![JavaDoc](https://img.shields.io/badge/JavaDoc-LiveStreamKt-blue.svg)](https://patilshreyas.github.io/LiveStream-kt/docs/)
+[![JavaDoc](https://img.shields.io/badge/JavaDoc-LiveStreamKt-blue.svg)](https://patilshreyas.github.io/LiveStream-kt/docs/livestream-kt/)
 
 ![Github Followers](https://img.shields.io/github/followers/PatilShreyas?label=Follow&style=social)
 ![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/LiveStream-kt?style=social)

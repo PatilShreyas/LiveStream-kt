@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
+apply plugin: 'org.jetbrains.dokka'
 
 version = "0.1"
 android {
@@ -26,6 +27,10 @@ android {
         }
     }
 
+    dokka {
+        outputFormat = 'jekyll'
+        outputDirectory = "docs/"
+    }
 }
 
 dependencies {

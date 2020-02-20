@@ -1,8 +1,4 @@
----
-title: StreamObserver - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream](../index.html) / [StreamObserver](./index.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream](../index.md) / [StreamObserver](./index.md)
 
 # StreamObserver
 
@@ -13,5 +9,6 @@ Reference is useful to unsubscribe from stream.
 
 ### Properties
 
-| [stream](stream.html) | The data stream to which subscriber is observing.`val stream: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-
+| Name | Summary |
+|---|---|
+| [stream](stream.md) | The data stream to which subscriber is observing.`val stream: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

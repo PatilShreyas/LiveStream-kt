@@ -1,16 +1,12 @@
----
-title: LiveStream.subscribe - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream](../index.html) / [LiveStream](index.html) / [subscribe](./subscribe.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream](../index.md) / [LiveStream](index.md) / [subscribe](./subscribe.md)
 
 # subscribe
 
-`fun subscribe(stream: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, onChangeListener: OnChangeListener<T>): `[`StreamObserver`](../-stream-observer/index.html)`<T>`
+`fun subscribe(stream: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, onChangeListener: OnChangeListener<T>): `[`StreamObserver`](../-stream-observer/index.md)`<T>`
 
 Subscribes to the given stream. The events are dispatched on the main thread.
 If stream already has data set, it will be delivered to the listener.
-You should call [unsubscribe](unsubscribe.html) to stop observing LiveStream.
+You should call [unsubscribe](unsubscribe.md) to stop observing LiveStream.
 
 ### Parameters
 
@@ -19,6 +15,6 @@ You should call [unsubscribe](unsubscribe.html) to stop observing LiveStream.
 `onChangeListener` - The observer which will receive the events.
 
 **Return**
-[StreamObserver](../-stream-observer/index.html) Reference will be useful when you'll need to call a
-method [unsubscribe](unsubscribe.html).
+[StreamObserver](../-stream-observer/index.md) Reference will be useful when you'll need to call a
+method [unsubscribe](unsubscribe.md).
 

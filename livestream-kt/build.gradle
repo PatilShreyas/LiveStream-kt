@@ -28,7 +28,7 @@ android {
     }
 
     dokka {
-        outputFormat = 'jekyll'
+        outputFormat = 'gfm'
         outputDirectory = "docs/"
     }
 }

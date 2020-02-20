@@ -1,8 +1,4 @@
----
-title: DataStore.getValue - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream.data](../index.html) / [DataStore](index.html) / [getValue](./get-value.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream.data](../index.md) / [DataStore](index.md) / [getValue](./get-value.md)
 
 # getValue
 

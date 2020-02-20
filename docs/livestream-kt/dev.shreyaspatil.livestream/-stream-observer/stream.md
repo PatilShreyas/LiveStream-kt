@@ -1,8 +1,4 @@
----
-title: StreamObserver.stream - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream](../index.html) / [StreamObserver](index.html) / [stream](./stream.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream](../index.md) / [StreamObserver](index.md) / [stream](./stream.md)
 
 # stream
 
@@ -16,5 +12,5 @@ The data stream to which subscriber is observing.
 
 **See Also**
 
-[LiveStream](../-live-stream/index.html)
+[LiveStream](../-live-stream/index.md)
 

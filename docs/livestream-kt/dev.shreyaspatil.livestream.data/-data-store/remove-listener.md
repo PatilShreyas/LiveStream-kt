@@ -1,8 +1,4 @@
----
-title: DataStore.removeListener - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream.data](../index.html) / [DataStore](index.html) / [removeListener](./remove-listener.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream.data](../index.md) / [DataStore](index.md) / [removeListener](./remove-listener.md)
 
 # removeListener
 

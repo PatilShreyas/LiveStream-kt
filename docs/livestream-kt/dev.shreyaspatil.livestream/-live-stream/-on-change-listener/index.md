@@ -1,20 +1,17 @@
----
-title: LiveStream.OnChangeListener - livestream-kt
----
-
-[livestream-kt](../../../index.html) / [dev.shreyaspatil.livestream](../../index.html) / [LiveStream](../index.html) / [OnChangeListener](./index.html)
+[livestream-kt](../../../index.md) / [dev.shreyaspatil.livestream](../../index.md) / [LiveStream](../index.md) / [OnChangeListener](./index.md)
 
 # OnChangeListener
 
 `interface OnChangeListener<T>`
 
-A simple callback that can retrieve from [LiveStream](../index.html).
+A simple callback that can retrieve from [LiveStream](../index.md).
 
 **See Also**
 
-[LiveStream](../index.html)
+[LiveStream](../index.md)
 
 ### Functions
 
-| [onChange](on-change.html) | Called when the data is changed.`abstract fun onChange(value: T?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
-
+| Name | Summary |
+|---|---|
+| [onChange](on-change.md) | Called when the data is changed.`abstract fun onChange(value: T?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |

@@ -1,8 +1,4 @@
----
-title: DataItem.onChangeListener - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream.data](../index.html) / [DataItem](index.html) / [onChangeListener](./on-change-listener.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream.data](../index.md) / [DataItem](index.md) / [onChangeListener](./on-change-listener.md)
 
 # onChangeListener
 

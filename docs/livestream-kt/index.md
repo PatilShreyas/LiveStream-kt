@@ -1,15 +1,13 @@
----
-title: livestream-kt
----
-
-[livestream-kt](./index.html)
+[livestream-kt](./index.md)
 
 ### Packages
 
-| [dev.shreyaspatil.livestream](dev.shreyaspatil.livestream/index.html) |  |
-| [dev.shreyaspatil.livestream.data](dev.shreyaspatil.livestream.data/index.html) |  |
-| [dev.shreyaspatil.livestream.extension](dev.shreyaspatil.livestream.extension/index.html) |  |
+| Name | Summary |
+|---|---|
+| [dev.shreyaspatil.livestream](dev.shreyaspatil.livestream/index.md) |  |
+| [dev.shreyaspatil.livestream.data](dev.shreyaspatil.livestream.data/index.md) |  |
+| [dev.shreyaspatil.livestream.extension](dev.shreyaspatil.livestream.extension/index.md) |  |
 
 ### Index
 
-[All Types](alltypes/index.html)
+[All Types](alltypes/index.md)

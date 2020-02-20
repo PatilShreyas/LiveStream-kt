@@ -1,8 +1,4 @@
----
-title: DataStore.setListener - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream.data](../index.html) / [DataStore](index.html) / [setListener](./set-listener.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream.data](../index.md) / [DataStore](index.md) / [setListener](./set-listener.md)
 
 # setListener
 

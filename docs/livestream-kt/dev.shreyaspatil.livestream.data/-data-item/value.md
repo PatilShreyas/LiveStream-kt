@@ -1,8 +1,4 @@
----
-title: DataItem.value - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream.data](../index.html) / [DataItem](index.html) / [value](./value.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream.data](../index.md) / [DataItem](index.md) / [value](./value.md)
 
 # value
 

@@ -1,8 +1,4 @@
----
-title: LiveStream.<init> - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream](../index.html) / [LiveStream](index.html) / [&lt;init&gt;](./-init-.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream](../index.md) / [LiveStream](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

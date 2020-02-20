@@ -1,8 +1,4 @@
----
-title: LiveStream.getValue - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream](../index.html) / [LiveStream](index.html) / [getValue](./get-value.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream](../index.md) / [LiveStream](index.md) / [getValue](./get-value.md)
 
 # getValue
 
@@ -16,5 +12,5 @@ does not guarantee that the latest value set will be received.
 `stream` - Data stream
 
 **Return**
-The current value of a [stream](get-value.html#dev.shreyaspatil.livestream.LiveStream$getValue(kotlin.String)/stream)
+The current value of a [stream](get-value.md#dev.shreyaspatil.livestream.LiveStream$getValue(kotlin.String)/stream)
 

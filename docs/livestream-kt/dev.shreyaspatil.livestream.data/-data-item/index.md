@@ -1,8 +1,4 @@
----
-title: DataItem - livestream-kt
----
-
-[livestream-kt](../../index.html) / [dev.shreyaspatil.livestream.data](../index.html) / [DataItem](./index.html)
+[livestream-kt](../../index.md) / [dev.shreyaspatil.livestream.data](../index.md) / [DataItem](./index.md)
 
 # DataItem
 
@@ -10,10 +6,13 @@ title: DataItem - livestream-kt
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `DataItem(value: T? = null, onChangeListener: `[`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html)`<OnChangeListener<T>>? = null)` |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `DataItem(value: T? = null, onChangeListener: `[`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html)`<OnChangeListener<T>>? = null)` |
 
 ### Properties
 
-| [onChangeListener](on-change-listener.html) | `var onChangeListener: `[`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html)`<OnChangeListener<T>>?` |
-| [value](value.html) | `var value: T?` |
-
+| Name | Summary |
+|---|---|
+| [onChangeListener](on-change-listener.md) | `var onChangeListener: `[`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html)`<OnChangeListener<T>>?` |
+| [value](value.md) | `var value: T?` |

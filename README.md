@@ -44,7 +44,7 @@ Add below dependency in [`build.gradle`](app/build.gradle) of your app module.
 Latest Build - ![Bintray](https://img.shields.io/bintray/v/patilshreyas/maven/dev.shreyaspatil:LiveStream-kt?style=flat-square)
 ```gradle
 dependencies {
-    implementation 'dev.shreyaspatil:LiveStream-kt:0.1'
+    implementation 'dev.shreyaspatil:LiveStream-kt:0.2'
 }
 ```
 

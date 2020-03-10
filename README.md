@@ -6,6 +6,8 @@
 
 LiveStream is a data holder class which can observe ***change*** of data in real-time and ***emit values*** too. Unlike other observables, LiveStream uses different approach. Here's emitter subscriber pattern. It's developed in Kotlin and fully compatible with Java.
 
+![Build](https://github.com/PatilShreyas/LiveStream-kt/workflows/CI/badge.svg?event=push)
+
 ![Bintray](https://img.shields.io/bintray/v/patilshreyas/maven/dev.shreyaspatil:LiveStream-kt?style=flat-square)
 ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg)
 [![JavaDoc](https://img.shields.io/badge/JavaDoc-LiveStreamKt-blue.svg)](https://patilshreyas.github.io/LiveStream-kt/docs/livestream-kt/)

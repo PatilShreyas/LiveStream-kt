@@ -78,6 +78,11 @@ class DataStore<T : Any> private constructor() {
 
             // Finally, add listener to the list.
             listeners?.add(onChangeListener)
+
+            // If value is non-null, give callback
+            item.value?.let {
+                onChangeListener.onChange(it)
+            }
         }
     }
 

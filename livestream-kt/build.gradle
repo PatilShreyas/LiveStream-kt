@@ -5,10 +5,10 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 apply plugin: 'org.jetbrains.dokka'
 
-version = "0.1"
+version = "0.2"
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 19
